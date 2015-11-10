@@ -16,5 +16,22 @@ namespace car_park_prototype
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            secure_parking a = new secure_parking();
+            a.Show();
+        }
+
+        private void customer_controles_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            parking a = new parking();
+            a.Show();
+        }
     }
 }

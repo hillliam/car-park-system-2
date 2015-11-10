@@ -28,5 +28,11 @@ namespace car_park_prototype
             car_park_creator a = new car_park_creator();
             a.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            customer_controles a = new customer_controles();
+            a.Show();
+        }
     }
 }
