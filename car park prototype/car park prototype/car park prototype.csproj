@@ -44,6 +44,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="admin controles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin controles.Designer.cs">
+      <DependentUpon>admin controles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="car park creator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="car park creator.Designer.cs">
+      <DependentUpon>car park creator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="carpark.cs" />
+    <Compile Include="customer controles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="customer controles.Designer.cs">
+      <DependentUpon>customer controles.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -52,6 +71,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="admin controles.resx">
+      <DependentUpon>admin controles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="car park creator.resx">
+      <DependentUpon>car park creator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="customer controles.resx">
+      <DependentUpon>customer controles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

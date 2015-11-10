@@ -16,5 +16,17 @@ namespace car_park_prototype
         {
             InitializeComponent();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            admin_controles a = new admin_controles();
+            a.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            car_park_creator a = new car_park_creator();
+            a.Show();
+        }
     }
 }
