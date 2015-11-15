@@ -75,6 +75,12 @@
     <Compile Include="parking.Designer.cs">
       <DependentUpon>parking.cs</DependentUpon>
     </Compile>
+    <Compile Include="pay system.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pay system.Designer.cs">
+      <DependentUpon>pay system.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="secure parking.cs">

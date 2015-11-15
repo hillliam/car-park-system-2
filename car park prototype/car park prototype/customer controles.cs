@@ -33,5 +33,11 @@ namespace car_park_prototype
             parking a = new parking();
             a.Show();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            pay_system a = new pay_system();
+            a.Show();
+        }
     }
 }
