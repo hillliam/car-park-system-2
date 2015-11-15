@@ -1,0 +1,5 @@
+language: csharp
+solution: car park prototype/car park prototype.sln.sln
+
+notifications:
+  email: true
