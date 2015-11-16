@@ -63,6 +63,12 @@
     <Compile Include="customer controles.Designer.cs">
       <DependentUpon>customer controles.cs</DependentUpon>
     </Compile>
+    <Compile Include="discount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="discount.Designer.cs">
+      <DependentUpon>discount.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +103,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="customer controles.resx">
       <DependentUpon>customer controles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="discount.resx">
+      <DependentUpon>discount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
