@@ -57,6 +57,7 @@
       <DependentUpon>car park creator.cs</DependentUpon>
     </Compile>
     <Compile Include="carpark.cs" />
+    <Compile Include="coin.cs" />
     <Compile Include="customer controles.cs">
       <SubType>Form</SubType>
     </Compile>
