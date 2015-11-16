@@ -16,5 +16,27 @@ namespace car_park_prototype
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Program.parks.Add(new carpark(textBox1.Text, textBox2.Text, int.Parse(textBox3.Text), int.Parse(textBox7.Text), int.Parse(textBox4.Text)));
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {// load list of car parks
+            populatecarparks()
+        }
+        private void populatecarparks()
+        {
+            foreach (carpark a in Program.parks)
+            {
+                listBox1.Items.Add(a.print());
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

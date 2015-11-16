@@ -21,5 +21,20 @@ namespace car_park_prototype
         {
             this.Close();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {// set coin to fixed price
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {// set coin to reduced rate
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {// set coin to free
+
+        }
     }
 }

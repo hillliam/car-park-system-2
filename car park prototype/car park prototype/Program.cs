@@ -8,6 +8,10 @@ namespace car_park_prototype
 {
     static class Program
     {
+        public static List<coin> coins = new List<coin>();
+        public static List<carpark> parks = new List<carpark>();
+        public static bool noexit = false;
+        public static bool emergency = false;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>

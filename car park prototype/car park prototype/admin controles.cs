@@ -15,6 +15,31 @@ namespace car_park_prototype
         public admin_controles()
         {
             InitializeComponent();
+            populatecarparks();
+        }
+        private void populatecarparks()
+        { 
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {// update enter and exit status
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {// load that car park
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {// stop exit
+            Program.noexit = true;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {// start emergency
+            Program.emergency = true;
         }
     }
 }
