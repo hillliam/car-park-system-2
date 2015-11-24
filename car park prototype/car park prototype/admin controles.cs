@@ -41,5 +41,10 @@ namespace car_park_prototype
         {// start emergency
             Program.emergency = true;
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {// find coin with number plate
+
+        }
     }
 }

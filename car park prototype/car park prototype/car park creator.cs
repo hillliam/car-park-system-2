@@ -19,12 +19,13 @@ namespace car_park_prototype
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Program.parks.Add(new carpark(textBox1.Text, textBox2.Text, int.Parse(textBox3.Text), int.Parse(textBox7.Text), int.Parse(textBox4.Text)));
+            carpark a = new carpark(textBox1.Text, textBox2.Text, int.Parse(textBox3.Text), int.Parse(textBox7.Text), int.Parse(textBox4.Text));
+            Program.parks.Add(a);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {// load list of car parks
-            populatecarparks()
+            populatecarparks();
         }
         private void populatecarparks()
         {

@@ -57,6 +57,12 @@
       <DependentUpon>car park creator.cs</DependentUpon>
     </Compile>
     <Compile Include="carpark.cs" />
+    <Compile Include="city display.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="city display.Designer.cs">
+      <DependentUpon>city display.cs</DependentUpon>
+    </Compile>
     <Compile Include="coin.cs" />
     <Compile Include="customer controles.cs">
       <SubType>Form</SubType>
@@ -102,6 +108,9 @@
     <EmbeddedResource Include="car park creator.resx">
       <DependentUpon>car park creator.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="city display.resx">
+      <DependentUpon>city display.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="customer controles.resx">
       <DependentUpon>customer controles.cs</DependentUpon>
     </EmbeddedResource>
@@ -113,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="parking.resx">
       <DependentUpon>parking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pay system.resx">
+      <DependentUpon>pay system.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

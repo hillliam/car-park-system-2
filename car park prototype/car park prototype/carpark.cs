@@ -84,7 +84,7 @@ namespace car_park_prototype
         { // relies on floor - 1 being added
             parking.Add(number);
         }
-        public void setparkingbyfloor(int floor, int number)
+        public void setsparkingbyfloor(int floor, int number)
         { // relies on floor - 1 being added
             sparking.Add(number);
         }
@@ -99,6 +99,24 @@ namespace car_park_prototype
         public int getfreeparking(int floor)
         {
             return parking[floor] - usedparking[floor];
+        }
+        public int getallfreeparking()
+        {
+            int spaces = 0;
+            for (int i = 0; i != floors; i++)
+            {
+                spaces += getfreeparking(i);
+            }
+            return spaces;
+        }
+        public int getallfreesparking()
+        {
+            int spaces = 0;
+            for (int i = 0; i != floors; i++)
+            {
+                spaces += getfreesparking(i);
+            }
+            return spaces;
         }
     }
 }
