@@ -20,6 +20,11 @@ namespace car_park_prototype
         private void button1_Click(object sender, EventArgs e)
         {
             carpark a = new carpark(textBox1.Text, textBox2.Text, int.Parse(textBox3.Text), int.Parse(textBox7.Text), int.Parse(textBox4.Text));
+            for (int i = 0; i != int.Parse(textBox4.Text); i++)
+            {
+                a.setparkingbyfloor(i, int.Parse(textBox5.Text));
+                a.setsparkingbyfloor(i, int.Parse(textBox6.Text));
+            }
             Program.parks.Add(a);
         }
 

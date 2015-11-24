@@ -16,5 +16,13 @@ namespace car_park_prototype
         {
             InitializeComponent();
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (Program.emergency)
+            {
+                textBox1.Text = "no payment applowed";
+            }
+        }
     }
 }
