@@ -45,7 +45,7 @@ namespace car_park_prototype
                 switch (foundcoin.bill)
                 {
                     case paymenttype.fulltime:
-                        textBox1.Text = foundcoin.;
+                        textBox1.Text = (foundcoin.spenttime.TotalHours* 2.50).ToString(); // Made some changes here
                         break;
                     case paymenttype.fixedpay:
                         textBox1.Text = foundcoin.fixedprice.ToString();
@@ -55,7 +55,7 @@ namespace car_park_prototype
                         foundcoin.payed = true;
                         break;
                     case paymenttype.discounttime:
-                        textBox1.Text = foundcoin.;
+                        textBox1.Text = (foundcoin.spenttime.TotalHours* foundcoin.costperhour).ToString(); //Made some changes here
                         break;
                         
                 }
