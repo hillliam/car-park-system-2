@@ -36,5 +36,10 @@ namespace car_park_prototype
         {// set coin to free
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {// get coin
+
+        }
     }
 }
