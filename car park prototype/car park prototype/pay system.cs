@@ -29,48 +29,57 @@ namespace car_park_prototype
 
         private void button1_Click(object sender, EventArgs e)
         {// coin
-            int id = int.Parse(textBox2.Text);
-            bool found = false;
-            coin foundcoin= null;
-            foreach (coin a in Program.coins)
-            {
-                if (a.id == id)
-                {
-                    foundcoin = a;
-                    found = true;
-                }
-            }
-            if (found)
-            {
-                switch (foundcoin.bill)
+            timer3.Stop();
+            timer3.Start();
+            timer2.Stop();
+            timer2.Start();
+                switch (Program.coins[0].bill)
                 {
                     case paymenttype.fulltime:
-                        textBox1.Text = (foundcoin.spenttime.TotalHours* 2.50).ToString(); // Made some changes here
+                        textBox1.Text = (Program.coins[0].spenttime.TotalMinutes * 2.50).ToString(); // Made some changes here
                         break;
                     case paymenttype.fixedpay:
-                        textBox1.Text = foundcoin.fixedprice.ToString();
+                        textBox1.Text = Program.coins[0].fixedprice.ToString();
                         break;
                     case paymenttype.free:
                         textBox1.Text = "free stay";
-                        foundcoin.payed = true;
+                        Program.coins[0].payed = true;
                         break;
                     case paymenttype.discounttime:
-                        textBox1.Text = (foundcoin.spenttime.TotalHours* foundcoin.costperhour).ToString(); //Made some changes here
+                        textBox1.Text = (Program.coins[0].spenttime.TotalMinutes * Program.coins[0].costperhour).ToString(); //Made some changes here
                         break;
                         
                 }
-            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {//pay
+            timer3.Stop();
+            timer3.Start();
+            timer2.Stop();
+            timer2.Start();
             textBox1.Text = "payed for";
+            Program.coins[0].payed = true;
         }
 
         private void button3_Click(object sender, EventArgs e)
         {//return coin
+            timer3.Stop();
+            timer3.Start();
+            timer2.Stop();
+            timer2.Start();
             textBox1.Text = "insert coin";
-            textBox2.Text = "";
+
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void timer3_Tick(object sender, EventArgs e)
+        {
+            MessageBox.Show("please interact or the form will close");
         }
     }
 }

@@ -141,9 +141,9 @@
             // 
             this.button2.Location = new System.Drawing.Point(63, 72);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(130, 23);
             this.button2.TabIndex = 11;
-            this.button2.Text = "prevent exit";
+            this.button2.Text = "open exit and enterance";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 

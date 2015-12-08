@@ -24,5 +24,15 @@ namespace car_park_prototype
         public double costperhour; // if discounttime then use this instead of default
         public double fixedprice; // if fixedpay then use this
 
+        public coin()
+        {
+            id = 0;
+            carplate = "nv56 qyc";
+            bill = paymenttype.fulltime;
+            payed = false;
+            entertime = DateTime.Now;
+            costperhour = 0;
+            fixedprice = 0;
+        }
     }
 }

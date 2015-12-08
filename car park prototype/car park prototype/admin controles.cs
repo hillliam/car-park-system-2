@@ -33,13 +33,14 @@ namespace car_park_prototype
         }
 
         private void button2_Click(object sender, EventArgs e)
-        {// stop exit
-            Program.noexit = true;
+        {// allow exit and enterance
+            Program.noexit = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {// start emergency
             Program.emergency = true;
+            Program.noexit = true;
         }
 
         private void button3_Click(object sender, EventArgs e)

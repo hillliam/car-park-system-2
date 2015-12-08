@@ -39,5 +39,11 @@ namespace car_park_prototype
             pay_system a = new pay_system();
             a.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Program.coins[0] = new coin();
+            
+        }
     }
 }
