@@ -76,6 +76,12 @@
     <Compile Include="discount.Designer.cs">
       <DependentUpon>discount.cs</DependentUpon>
     </Compile>
+    <Compile Include="emergency selector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="emergency selector.Designer.cs">
+      <DependentUpon>emergency selector.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="discount.resx">
       <DependentUpon>discount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="emergency selector.resx">
+      <DependentUpon>emergency selector.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
