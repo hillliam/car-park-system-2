@@ -45,7 +45,20 @@ namespace car_park_prototype
 
         private void button3_Click(object sender, EventArgs e)
         {// find coin with number plate
+            if (Program.coins[0] != null)
+            {
+                MessageBox.Show("coin created for numberplate: nv56 qyc");
+            }
+            else
+            {
+                MessageBox.Show("no coin found for car");
+            }
+        }
 
+        private void button4_Click(object sender, EventArgs e)
+        {// return to normal
+            Program.emergency = false;
+            Program.noexit = false;
         }
     }
 }

@@ -17,6 +17,7 @@ namespace car_park_prototype
         public pay_system()
         {
             InitializeComponent();
+            textBox1.Text = "insert coin";
         }
 
         private void timer1_Tick(object sender, EventArgs e)

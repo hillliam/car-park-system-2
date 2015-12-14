@@ -11,9 +11,9 @@ namespace car_park_prototype
         private string name; // the name of the car park 
         private string city; // the city it is in
         private bool openenter; // status of the entrance true = open false = closed
-        private int exitnum; // number of exits
-        private int paymachinenum; // the number of pay machine
-        private int floors; // the number of floors in the car park 
+        public int exitnum; // number of exits
+        public int paymachinenum; // the number of pay machine
+        public int floors; // the number of floors in the car park 
         private List<bool> exits; // status of exits true = open false = closed
 
         private List<int> parking; // parking by floor level
@@ -81,6 +81,22 @@ namespace car_park_prototype
                 spaces += getfreesparking(i);
             }
             return spaces;
+        }
+        public void ocupyspot(int floor)
+        {
+            usedparking[floor]++;
+        }
+        public void freespot(int floor)
+        {
+            usedparking[floor]++;
+        }
+        public void ocupysspot(int floor)
+        {
+            usedsparking[floor]++;
+        }
+        public void freesspot(int floor)
+        {
+            usedsparking[floor]++;
         }
     }
 }
