@@ -69,5 +69,15 @@ namespace car_park_prototype
                 else
                     MessageBox.Show("invalid code");
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {//park
+            Program.parks[0].ocupysspot(selectedf);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {//leave
+            Program.parks[0].freesspot(selectedf);
+        }
     }
 }
