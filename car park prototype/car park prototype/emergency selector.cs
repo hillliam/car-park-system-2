@@ -19,13 +19,15 @@ namespace car_park_prototype
 
         private void button1_Click(object sender, EventArgs e)
         {//fire
-            Program.emergency = true;
-            if (Program.coins[0] != null)
-            {
-                Program.coins[0].calculatecost();
-                Program.coins[0].bill = paymenttype.fixedpay;
-            }
-            this.Close();
+            //program.emergency = true;
+            //if (program.coins[0] != null)
+            //{
+            //    program.coins[0].calculatecost();
+            //    program.coins[0].bill = paymenttype.fixedpay;
+            //}
+            //this.close();
+            Fire_emergency fire = new Fire_emergency();
+            fire.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)

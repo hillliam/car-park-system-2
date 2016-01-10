@@ -39,8 +39,10 @@ namespace car_park_prototype
 
         private void button1_Click(object sender, EventArgs e)
         {// start emergency
-            Program.emergency = true;
-            Program.noexit = true;
+            //Program.emergency = true;
+            //Program.noexit = true;
+            emergency_selector emergency = new emergency_selector();
+            emergency.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
