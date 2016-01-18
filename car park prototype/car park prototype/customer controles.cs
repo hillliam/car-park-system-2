@@ -42,7 +42,7 @@ namespace car_park_prototype
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Program.coins[0] = new coin();
+            Program.coins.Add(new coin());
             
         }
     }

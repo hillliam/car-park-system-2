@@ -12,6 +12,7 @@ namespace car_park_prototype
 {
     public partial class secure_parking: Form
     {
+        private int click = 0;
         private int selectedf = -1;
         private int selectedspot = -1;
         public secure_parking()
@@ -72,12 +73,34 @@ namespace car_park_prototype
 
         private void button1_Click(object sender, EventArgs e)
         {//park
-            Program.parks[0].ocupysspot(selectedf);
+            if (Program.coins[0].code == "")
+            {
+                MessageBox.Show("please set code to park the car");
+            }
+            else
+            {
+                Program.parks[0].ocupysspot(selectedf);
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {//leave
-            Program.parks[0].freesspot(selectedf);
+            if (Program.coins[0].code != "")
+            {
+                if (click == 0)
+                {
+                    MessageBox.Show("please unlock parking spot before leaving");
+                    click++;
+                }
+                else
+                {
+                    MessageBox.Show("alarm activated");
+                }
+            }
+            else
+            {
+                Program.parks[0].freesspot(selectedf);
+            }
         }
     }
 }
