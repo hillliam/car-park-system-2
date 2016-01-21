@@ -11,6 +11,9 @@ namespace car_park_prototype
         public static List<coin> coins = new List<coin>();
         public static List<carpark> parks = new List<carpark>();
         public static bool noexit = false;
+        public static bool loadenterimage = false; // displays the image of the car at the entrance
+        public static bool loadexitimage = false; // displays the image of the car at the exit 
+        public static int cutomerindex = 1; // 1 = good customer 2 = bad customer
         public static bool emergency = false;
         /// <summary>
         /// The main entry point for the application.

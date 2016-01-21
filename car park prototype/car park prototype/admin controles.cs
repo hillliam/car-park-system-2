@@ -12,6 +12,7 @@ namespace car_park_prototype
 {
     public partial class admin_controles : Form
     {
+        private bool displayerror = true;
         public admin_controles()
         {
             InitializeComponent();
@@ -24,7 +25,32 @@ namespace car_park_prototype
 
         private void timer1_Tick(object sender, EventArgs e)
         {// update enter and exit status
-
+            if (Program.loadenterimage)
+            {
+                if (Program.cutomerindex == 1)
+                    pictureBox1.ImageLocation = "1.png";
+                else if (Program.cutomerindex == 2)
+                    pictureBox1.ImageLocation = "2.png";
+            }
+            else
+            {
+                pictureBox1.Image = null;
+            }
+            if (Program.loadexitimage)
+            {
+                if (Program.cutomerindex == 1)
+                    pictureBox2.ImageLocation = "1.png";
+                else if (Program.cutomerindex == 2)
+                    pictureBox2.ImageLocation = "2.png";
+                if (Program.cutomerindex == 2 && displayerror)
+                {
+                    MessageBox.Show("a different driver is attempting to exit the carpark with a customers car");
+                }
+            }
+            else
+            {
+                pictureBox2.Image = null;
+            }
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

@@ -19,6 +19,7 @@ namespace car_park_prototype
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Program.loadenterimage = false;
             secure_parking a = new secure_parking();
             a.Show();
         }
@@ -30,6 +31,7 @@ namespace car_park_prototype
 
         private void button4_Click(object sender, EventArgs e)
         {
+            Program.loadenterimage = false;
             parking a = new parking();
             a.Show();
         }
@@ -43,7 +45,12 @@ namespace car_park_prototype
         private void button2_Click(object sender, EventArgs e)
         {
             Program.coins.Add(new coin());
-            
+            Program.loadenterimage = true;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Program.loadexitimage = true;
         }
     }
 }
