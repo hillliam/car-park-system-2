@@ -19,8 +19,27 @@ namespace car_park_prototype
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            textBox1.Text = Program.parks[0].getallfreeparking().ToString();
-            textBox2.Text = Program.parks[0].getallfreesparking().ToString();
+            if (Program.emergency)
+            {
+                textBox1.Text = "Emergency In Progress".ToString();
+                textBox2.Text = "Please use other Carparks".ToString();
+            }
+            else
+            {
+                textBox1.Text = Program.parks[0].getallfreeparking().ToString();
+                textBox2.Text = Program.parks[0].getallfreesparking().ToString();
+            }
+        }
+
+        private void city_display_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            
+
         }
     }
 }

@@ -98,5 +98,9 @@ namespace car_park_prototype
         {
             usedsparking[floor]++;
         }
+        public void setexitstatue(bool exit)
+        {
+            exits[exitnum]=exit;
+        }
     }
 }

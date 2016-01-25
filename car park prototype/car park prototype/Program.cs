@@ -15,6 +15,7 @@ namespace car_park_prototype
         public static bool loadexitimage = false; // displays the image of the car at the exit 
         public static int cutomerindex = 1; // 1 = good customer 2 = bad customer
         public static bool emergency = false;
+        public static bool exitopener = false;  //for manual exit opener in case of a power outtage
         /// <summary>
         /// The main entry point for the application.
         /// </summary>

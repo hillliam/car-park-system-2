@@ -44,5 +44,10 @@ namespace car_park_prototype
         {
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -33,12 +33,8 @@ namespace car_park_prototype
         private void button2_Click(object sender, EventArgs e)
         {//power out
             Program.emergency = true;
-            if (Program.coins[0] != null)
-            {
-            Program.coins[0].calculatecost();
-            Program.coins[0].bill = paymenttype.fixedpay;
-            }
-            this.Close();
+            Power_Outtage power = new Power_Outtage();
+            power.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
