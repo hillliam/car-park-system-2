@@ -25,6 +25,9 @@ namespace car_park_prototype
 
         private void timer1_Tick(object sender, EventArgs e)
         {// update enter and exit status
+            listBox1.Items.Clear();
+            for (int i = 0; i != Program.parks[0].exitnum; i++)
+                listBox1.Items.Add("exit " + i.ToString() + " status is " + Program.parks[0].getexitstatus(i).ToString());
             if (Program.loadenterimage)
             {
                 if (Program.cutomerindex == 1)
