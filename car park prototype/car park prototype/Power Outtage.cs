@@ -23,7 +23,7 @@ namespace car_park_prototype
             try
             {
                 
-            Program.parks[0].setexitstatue(true);
+           // Program.parks[0].setexitstatue(true);
             MessageBox.Show("The selected exit has been opened");
             }
             catch (ArgumentOutOfRangeException )
@@ -42,7 +42,7 @@ namespace car_park_prototype
             {
                 MessageBox.Show("Please create a carpark first");
             }
-            Program.parks[exitreader].setexitstatue(false);
+            //Program.parks[exitreader].setexitstatue(false);
             MessageBox.Show("The selected exit has been closed");
         }
     }

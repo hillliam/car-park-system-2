@@ -25,6 +25,7 @@ namespace car_park_prototype
                 a.setparkingbyfloor(i, int.Parse(textBox5.Text));
                 a.setsparkingbyfloor(i, int.Parse(textBox6.Text));
             }
+            a.setexitbyfnum(a.exitnum);
             Program.parks.Add(a);
         }
 

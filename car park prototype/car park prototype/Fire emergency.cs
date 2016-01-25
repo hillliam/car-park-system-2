@@ -12,7 +12,7 @@ namespace car_park_prototype
 {
     public partial class Fire_emergency : Form
     {
-        System.Media.SoundPlayer playr = new System.Media.SoundPlayer(@"C:\Users\Teto Sama\Downloads\Music\alarm_beep.wav");
+        System.Media.SoundPlayer playr = new System.Media.SoundPlayer(@"alarm_beep.wav");
         public Fire_emergency()
         {
             InitializeComponent();
@@ -48,7 +48,7 @@ namespace car_park_prototype
 
         private void Sprinkler_Click(object sender, EventArgs e)
         {
-            System.Media.SoundPlayer playr2 = new System.Media.SoundPlayer(@"C:\Users\Teto Sama\Downloads\Music\rain-01.wav");
+            System.Media.SoundPlayer playr2 = new System.Media.SoundPlayer(@"rain-01.wav");
             playr2.Play();
             playr.LoadTimeout=10000;
 

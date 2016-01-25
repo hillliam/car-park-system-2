@@ -98,9 +98,18 @@ namespace car_park_prototype
         {
             usedsparking[floor]++;
         }
-        public void setexitstatue(bool exit)
+        public void setexitbyfnum(int exitnum)
+        { // 
+            for (int i = 0; i != exitnum; i++)
+                exits.Add(false);
+        }
+        public bool getexitstatus(int exitnum)
         {
-            exits[exitnum]=exit;
+            return exits[exitnum];
+        }
+        public void setexitstatus(int exitnum, bool val)
+        {
+            exits[exitnum] = val;
         }
     }
 }
