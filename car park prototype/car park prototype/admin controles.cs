@@ -41,9 +41,9 @@ namespace car_park_prototype
             }
             if (Program.loadexitimage)
             {
-                if (Program.cutomerindex == 1)
+                if (Program.cutomerindex == 1 && Program.coins[0].code == "recognition")
                     pictureBox2.ImageLocation = "1.png";
-                else if (Program.cutomerindex == 2)
+                else if (Program.cutomerindex == 2 && Program.coins[0].code == "recognition")
                     pictureBox2.ImageLocation = "2.png";
                 if (Program.cutomerindex == 2 && displayerror)
                 {
@@ -76,13 +76,20 @@ namespace car_park_prototype
 
         private void button3_Click(object sender, EventArgs e)
         {// find coin with number plate
-            if (Program.coins[0] != null)
+            try
             {
-                MessageBox.Show("coin created for numberplate: nv56 qyc");
+                if (Program.coins[0] != null)
+                {
+                    MessageBox.Show("coin created for numberplate: nv56 qyc");
+                }
+                else
+                {
+                    MessageBox.Show("no coin found for car");
+                }
             }
-            else
+            catch (Exception)
             {
-                MessageBox.Show("no coin found for car");
+                MessageBox.Show("no car in car park");
             }
         }
 

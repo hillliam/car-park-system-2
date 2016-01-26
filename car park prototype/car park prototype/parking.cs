@@ -14,6 +14,8 @@ namespace car_park_prototype
     {
         private int selectedf = -1;
         private int selectedspot = -1;
+        private int unlockclick = 0;
+        private int click = 0;
         public parking()
         {
             InitializeComponent();
@@ -42,6 +44,7 @@ namespace car_park_prototype
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             selectedf = listBox1.SelectedIndex;
+            populatespot();
         }
 
         private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
@@ -51,12 +54,54 @@ namespace car_park_prototype
 
         private void button1_Click(object sender, EventArgs e)
         {//park
-            Program.parks[0].ocupyspot(selectedf);
+            if (Program.coins[0].code == "")
+            {
+                MessageBox.Show("please set code to park the car");
+            }
+            else
+            { 
+                Program.parks[0].ocupyspot(selectedf);
+                this.Close();
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {//leave
-            Program.parks[0].freespot(selectedf);
+            if (Program.coins[0].code != "")
+            {
+                if (click != 4)
+                {
+                    MessageBox.Show("please unlock parking spot before leaving");
+                    click++;
+                }
+                else
+                {
+                    MessageBox.Show("alarm activated");
+                }
+            }
+            else
+            {
+                Program.parks[0].freesspot(selectedf);
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {//lock
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {//unlock
+            if (Program.coins[0].code == "")
+                MessageBox.Show("already unlocked");
+            else
+                if (textBox1.Text == Program.coins[0].code)
+                    Program.coins[0].code = "";
+                else
+                    if (unlockclick != 5)
+                        MessageBox.Show("invalid code you have " + (5 - unlockclick++) + " attempts left");
+                    else
+                        MessageBox.Show("alarm activated");
         }
     }
 }

@@ -55,27 +55,16 @@ namespace car_park_prototype
         private void button3_Click(object sender, EventArgs e)
         {// lock
             if (Program.coins[0].code == "")
-                Program.coins[0].code = textBox1.Text;
+                Program.coins[0].code = "recognition";
             else
                 MessageBox.Show("spot is locked");
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            if (Program.coins[0].code == "")
-                MessageBox.Show("already unlocked");
-            else
-                if (textBox1.Text == Program.coins[0].code)
-                    Program.coins[0].code = "";
-                else
-                    MessageBox.Show("invalid code");
         }
 
         private void button1_Click(object sender, EventArgs e)
         {//park
             if (Program.coins[0].code == "")
             {
-                MessageBox.Show("please set code to park the car");
+                MessageBox.Show("please insert coin to activate the parking spot");
             }
             else
             {
@@ -85,22 +74,7 @@ namespace car_park_prototype
 
         private void button2_Click(object sender, EventArgs e)
         {//leave
-            if (Program.coins[0].code != "")
-            {
-                if (click == 0)
-                {
-                    MessageBox.Show("please unlock parking spot before leaving");
-                    click++;
-                }
-                else
-                {
-                    MessageBox.Show("alarm activated");
-                }
-            }
-            else
-            {
-                Program.parks[0].freesspot(selectedf);
-            }
+            Program.parks[0].freesspot(selectedf);
         }
     }
 }
