@@ -76,5 +76,19 @@ namespace car_park_prototype
         {
             pictureBox1.ImageLocation = "cam4.jpg";
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Random a = new Random();
+                MessageBox.Show("open exit " + a.Next(1, Program.parks[0].exitnum + 1) + " please");
+            }
+            catch (ArgumentOutOfRangeException)
+            {
+                MessageBox.Show("Please create a carpark first");
+                this.Close();
+            }
+        }
     }
 }

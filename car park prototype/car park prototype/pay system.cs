@@ -17,6 +17,7 @@ namespace car_park_prototype
         public pay_system()
         {
             InitializeComponent();
+            
             textBox1.Text = "insert coin";
         }
 
@@ -25,6 +26,10 @@ namespace car_park_prototype
             if (Program.emergency)
             {
                 textBox1.Text = "no payment allowed";
+            }
+            if (Program.floodstate == true)
+            {
+                textBox1.Text = "Flood in Carpark";
             }
         }
 

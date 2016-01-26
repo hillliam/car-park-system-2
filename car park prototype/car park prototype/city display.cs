@@ -24,6 +24,10 @@ namespace car_park_prototype
                 textBox1.Text = "Emergency In Progress".ToString();
                 textBox2.Text = "Please use other Carparks".ToString();
             }
+            else if(Program.floodstate){
+                textBox1.Text = "Car Park is currently flooded".ToString();
+                textBox2.Text = "Please use other carparks".ToString();
+            }
             else
             {
                 textBox1.Text = Program.parks[0].getallfreeparking().ToString();

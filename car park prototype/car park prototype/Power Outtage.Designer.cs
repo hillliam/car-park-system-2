@@ -39,6 +39,7 @@
             this.Cam3 = new System.Windows.Forms.Button();
             this.Cam4 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -148,12 +149,23 @@
             this.label2.TabIndex = 10;
             this.label2.Text = "CCTV Camera feed";
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(688, 356);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(150, 57);
+            this.button4.TabIndex = 11;
+            this.button4.Text = "Customer Call";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // Power_Outtage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(870, 504);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Cam4);
             this.Controls.Add(this.Cam3);
@@ -186,5 +198,6 @@
         private System.Windows.Forms.Button Cam3;
         private System.Windows.Forms.Button Cam4;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button4;
     }
 }

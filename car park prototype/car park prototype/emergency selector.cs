@@ -40,22 +40,26 @@ namespace car_park_prototype
         private void button3_Click(object sender, EventArgs e)
         {// repaires
             Program.emergency = true;
-            if (Program.coins[0] != null)
-            {
-            Program.coins[0].calculatecost();
-            Program.coins[0].bill = paymenttype.fixedpay;
-            }
+            //if (Program.coins[0] != null)
+            //{
+            //Program.coins[0].calculatecost();
+            //Program.coins[0].bill = paymenttype.fixedpay;
+            //}
+            Injuries injury = new Injuries();
+            injury.Show();
             this.Close();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {// flood
-            Program.emergency = true;
-            if (Program.coins[0] != null)
-            {
-                Program.coins[0].calculatecost();
-                Program.coins[0].bill = paymenttype.fixedpay;
-            }
+            //Program.emergency = true;
+            //if (Program.coins[0] != null)
+            //{
+            //    Program.coins[0].calculatecost();
+            //    Program.coins[0].bill = paymenttype.fixedpay;
+            //}
+            Flood flood = new Flood();
+            flood.Show();
             this.Close();
         }
     }
