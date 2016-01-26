@@ -22,7 +22,7 @@ namespace car_park_prototype
             int exitreader = int.Parse(textBox1.Text);
             try
             {
-                
+                Program.parks[0].setexitstatus(exitreader,true);
            // Program.parks[0].setexitstatue(true);
             MessageBox.Show("The selected exit has been opened");
             }
@@ -38,12 +38,43 @@ namespace car_park_prototype
         private void button2_Click(object sender, EventArgs e)
         {
             int exitreader = int.Parse(textBox1.Text);
-            if (Program.parks[0] == null)
+            try
+            {
+                Program.parks[0].setexitstatus(exitreader, false);
+                // Program.parks[0].setexitstatue(true);
+                MessageBox.Show("The selected exit has been closed");
+            }
+            catch (ArgumentOutOfRangeException)
             {
                 MessageBox.Show("Please create a carpark first");
+                this.Close();
             }
-            //Program.parks[exitreader].setexitstatue(false);
-            MessageBox.Show("The selected exit has been closed");
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Program.emergency = false;
+            this.Close();
+        }
+
+        private void Cam1_Click(object sender, EventArgs e)
+        {
+            pictureBox1.ImageLocation = "cam1.jpg";
+        }
+
+        private void Cam2_Click(object sender, EventArgs e)
+        {
+            pictureBox1.ImageLocation = "cam2.jpg";
+        }
+
+        private void Cam3_Click(object sender, EventArgs e)
+        {
+            pictureBox1.ImageLocation = "cam3.jpg";
+        }
+
+        private void Cam4_Click(object sender, EventArgs e)
+        {
+            pictureBox1.ImageLocation = "cam4.jpg";
         }
     }
 }
