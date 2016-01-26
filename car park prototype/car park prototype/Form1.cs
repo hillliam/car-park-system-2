@@ -45,5 +45,16 @@ namespace car_park_prototype
             city_display a = new city_display();
             a.Show();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            abooking a = new abooking();
+            a.Show();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
