@@ -19,8 +19,8 @@ namespace car_park_prototype
             populatecarparks();
         }
         private void populatecarparks()
-        { 
-
+        {
+            comboBox1.Items.Add(Program.parks[0].print());
         }
 
         private void timer1_Tick(object sender, EventArgs e)
