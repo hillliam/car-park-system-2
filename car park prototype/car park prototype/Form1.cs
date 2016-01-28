@@ -54,7 +54,8 @@ namespace car_park_prototype
 
         private void button7_Click(object sender, EventArgs e)
         {
-
+            floor_display a = new floor_display();
+            a.Show();
         }
     }
 }
