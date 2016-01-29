@@ -31,9 +31,9 @@ namespace car_park_prototype
             if (Program.loadenterimage)
             {
                 if (Program.cutomerindex == 1)
-                    pictureBox1.ImageLocation = "1.png";
+                    pictureBox1.ImageLocation = "1.jpg";
                 else if (Program.cutomerindex == 2)
-                    pictureBox1.ImageLocation = "2.png";
+                    pictureBox1.ImageLocation = "2.jpg";
             }
             else
             {
@@ -42,9 +42,9 @@ namespace car_park_prototype
             if (Program.loadexitimage)
             {
                 if (Program.cutomerindex == 1 && Program.coins[0].code == "recognition")
-                    pictureBox2.ImageLocation = "1.png";
+                    pictureBox2.ImageLocation = "1.jpg";
                 else if (Program.cutomerindex == 2 && Program.coins[0].code == "recognition")
-                    pictureBox2.ImageLocation = "2.png";
+                    pictureBox2.ImageLocation = "2.jpg";
                 if (Program.cutomerindex == 2 && displayerror)
                 {
                     MessageBox.Show("a different driver is attempting to exit the carpark with a customers car");
