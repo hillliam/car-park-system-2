@@ -44,7 +44,7 @@ namespace car_park_prototype
                 if (Program.cutomerindex == 1 && Program.coins[0].code == "recognition")
                     pictureBox2.ImageLocation = "1.jpg";
                 else if (Program.cutomerindex == 2 && Program.coins[0].code == "recognition")
-                    pictureBox2.ImageLocation = "2.jpg";
+                    pictureBox2.ImageLocation = "3.jpg";
                 if (Program.cutomerindex == 2 && displayerror)
                 {
                     MessageBox.Show("a different driver is attempting to exit the carpark with a customers car");
