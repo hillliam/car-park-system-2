@@ -45,6 +45,7 @@ namespace car_park_prototype
         private void button2_Click(object sender, EventArgs e)
         {
             Program.coins.Add(new coin());
+            Program.loadexitimage = false;
             Program.loadenterimage = true;
         }
 
